@@ -1,6 +1,6 @@
 {
   "name": "@prabink/git-push-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This command line application will allow you to push any folder in your project to any existing or new branch in the github with a single command.",
   "preferGlobal": true,
   "bin": {

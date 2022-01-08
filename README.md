@@ -43,7 +43,7 @@ This will allow you to choose any folder that you want to push into a github bra
 $ git-push-cli <foldername>
 ```
 #### Example
-<img src="https://drive.google.com/uc?export=download&id=1rc1lRAW77dM4NnMcLa-CUqPiiUwhiMSI" alt="Github_Deploy_Eg.gif"/>
+<img src="https://drive.google.com/uc?export=download&id=15r0Hzt87iTqMldOVnmVdihspRRm7RVSP" alt="Git_Push_Cli.gif"/>
 
 ## Tech Stack
 
