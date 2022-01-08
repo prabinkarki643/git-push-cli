@@ -1,0 +1,38 @@
+{
+  "name": "@prabink/git-push-cli",
+  "version": "1.0.0",
+  "description": "This command line application will allow you to push any folder in your project to any existing or new branch in the github with a single command.",
+  "preferGlobal": true,
+  "bin": {
+    "git-push-cli": "./commands.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/githubprabin143/git-push-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/githubprabin143/git-push-cli/issues"
+  },
+  "author": {
+    "name": "Prabin Karki",
+    "email": "prabinkarki643@gmail.com",
+    "url": "https://prabin-karki.com.np"
+  },
+  "keywords": [
+    "git-push-cli",
+    "Github Push",
+    "Github deploy"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "inquirer": "^8.2.0",
+    "shelljs": "^0.8.5"
+  }
+}
