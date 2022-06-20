@@ -9,6 +9,9 @@ const packageInfo = require("./package.json");
 const CWD = process.cwd();
 const program = new Command();
 
+var DEFAULT_BRANCH_NAME = "frontend-release";
+var DEFAULT_COMMIT_MESSAGE = "release with build";
+
 const colorReference = {
   Reset: "\x1b[0m",
   Bright: "\x1b[1m",
@@ -38,6 +41,10 @@ const colorReference = {
 };
 
 program.version(packageInfo.version).description("Git Push Cli Application");
+program
+  .option('-gb, --gitbranch <type>', 'default branch in git', DEFAULT_BRANCH_NAME);
+program
+  .option('-gcm, --gitcommitmessage <type>', 'default commit message in git', DEFAULT_COMMIT_MESSAGE);
 
 // Deploy any folder to github branch
 program.argument("[folderName]").action(async (folderName) => {
@@ -69,6 +76,9 @@ program.argument("[folderName]").action(async (folderName) => {
       );
       shell.exit(1);
     }
+
+    DEFAULT_BRANCH_NAME=program.opts().gitbranch
+    DEFAULT_COMMIT_MESSAGE=program.opts().gitcommitmessage
 
     await workingOnGit(userInputTargetFolderPath);
 
@@ -136,8 +146,6 @@ async function workingOnGit(folderToDeploy) {
   shell.exec(`git remote add origin "${CURRENT_GIT_ORIGIN}"`);
 
   // Get prefer branch name and commit message
-  const DEFAULT_BRANCH_NAME = "frontend-release";
-  const DEFAULT_COMMIT_MESSAGE = "release with build";
   const { branchName, commitMessage } = await prompt([
     {
       type: "input",

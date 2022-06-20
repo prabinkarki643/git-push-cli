@@ -28,11 +28,16 @@ $ npm i -g @prabink/git-push-cli
 ```sh
 $ git-push-cli --help
 Options:
-  -V, --version  output the version number
-  -h, --help     output usage information
+| Option             | Description  |     
+| ----------------- | ------------------------------------------------------------------ |
+| -V, --version  | output the version number |
+| -gb, --gitbranch <type>  | default branch in git (default: "frontend-release") |
+| -gcm, --gitcommitmessage <type> | default commit message in git (default: "release with build") |
+| -h, --help | display help for command |
 
 Commands:
-  git-push-cli <foldername>
+  git-push-cli <foldername> <br/>
+  git-push-cli <foldername> -gb <branchName> -gcm <gitCommitMssage>
 
 ```
 ## API Reference
